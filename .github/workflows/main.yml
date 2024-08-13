@@ -28,6 +28,11 @@ jobs:
       run: |
         npm install dotenv openai
 
+    - name: Compile and Run Tests
+      run: |
+        g++ -o student_code student_code.cpp
+        node test_code.js
+
     - name: Check environment variable
       run: echo $OPENAI_API_KEY
 
